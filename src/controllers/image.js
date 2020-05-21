@@ -3,6 +3,7 @@ const { randomNumber } = require('../helpers/libs');
 const fs = require('fs-extra');
 const { Image,Comment } = require('../models');
 const md5 = require('md5');
+const sidebar = require('../helpers/sidebar');
 
 const ctrl = {};
 
@@ -16,7 +17,7 @@ ctrl.index = async (req, res) => {
     const comments = await Comment.find({image_id: image._id});
     //.sort({'timestamp': 1});
     viewModel.comments = comments;
-    //viewModel = await sidebar(viewModel);
+    viewModel = await sidebar(viewModel);
     res.render('image', viewModel);
   } else {
     res.redirect('/');

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinderCun</title>
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/117b69ff99.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+            <img src="/public/img/logo.png" alt="Tindercun">
+            </a>
+
+        </div>
+    </nav>
+
+    <div class="container p-4">
+
+        <div class="row">
+            <div class="col-md-8">
+
+                {{{ body}}}
+
+            </div>
+            <div class="col-md -4">
+                {{> stats}}
+                {{> popular}}
+                {{> comments}}
+            </div>
+
+        </div>
+
+        
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <!-- CUSTOM CODE -->
+    <script src="/public/js/scripts.js"></script>
+</body>
+</html>

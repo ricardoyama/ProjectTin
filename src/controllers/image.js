@@ -12,17 +12,17 @@ ctrl.index = async (req, res) => {
   /*if (image) {
     image.views = image.views + 1;
     viewModel.image = image;
-    image.save();
-    const comments = await Comment.find({image_id: image._id})
-      .sort({'timestamp': 1});
-    viewModel.comments = comments;
+    image.save();*/
+    const comments = await Comment.find({image_id: image._id});
+      //.sort({'timestamp': 1});
+   /* viewModel.comments = comments;
     viewModel = await sidebar(viewModel);
     res.render('image', viewModel);
   } else {
     res.redirect('/');
   }*/
-  console.log(image);
-  res.render('image',{image});
+ 
+  res.render('image',{image, comments});
 };
 
 ctrl.create = (req, res) => {
